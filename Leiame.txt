@@ -1,0 +1,12 @@
+#Esse é um sistema de controle de estoque e passáros Desenvolvido em PHP
+
+1º Criar uma database chamada criatorio.db
+2º Importar o arquivo Criatorio.db para dentro da sua database
+3º Usuário admin e senha 123456a!
+
+
+
+Duvidas?
+
+email_ desenvolvedor: screamo.sp@gmail.com
+
