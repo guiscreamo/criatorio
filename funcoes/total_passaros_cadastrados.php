@@ -1,0 +1,66 @@
+<?php
+	require "../headers/conexao.php";
+
+	$ararajuba = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Ararajuba' GROUP BY especie");
+	$arara_azul = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Arara Azul Grande' GROUP BY especie");
+	$arara_caninde = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Arara Caninde' GROUP BY especie");
+	$arara_vermelha = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Arara Vermelha' GROUP BY especie");
+	$arara_tricolor = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Arara Tricolor' GROUP BY especie");
+	$arara_severa = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Arara Severa' GROUP BY especie");
+	$arara_manilata = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Arara Manilata' GROUP BY especie");
+	$ararinha_maracana = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Ararinha Maracana' GROUP BY especie");
+	$ararinha_nobre = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Ararinha Nobre' GROUP BY especie");
+	$curica_cabeca_azul = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Curica de Cabeca Azul' GROUP BY especie");
+	$jandaia_coquinho = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Jandaia Coquinho' GROUP BY especie");
+	$jandaia_mineira = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Jandaia Mineira' GROUP BY especie");
+	$jandaia_verdadeira = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Jandaia Verdadeira' GROUP BY especie");
+	$marianinha_cabeca_amarela = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Marianinha de Cabeca Amarela' GROUP BY especie");
+	$marianinha_cabeca_preta = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Marianinha de Cabeca Preta' GROUP BY especie");
+	$maitaca_verde = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Maitaca Verde' GROUP BY especie");
+	$papagaio_mangue = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Papagaio do Mangue' GROUP BY especie");
+	$papagaio_chaua = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Papagaio Chaua' GROUP BY especie");
+	$papagaio_peito_roxo = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Papagaio do Peito Roxo' GROUP BY especie");
+	$papagaio_galego = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Papagaio Galego' GROUP BY especie");
+	$papagaio_anaca = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Papagaio Anaca' GROUP BY especie");
+	$papagaio_verdadeiro = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Papagaio Verdadeiro' GROUP BY especie");
+	$papagaio_caatinga = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Papagaio da Caatinga' GROUP BY especie");
+	$periquitao_maracana = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Periquitao Maracana' GROUP BY especie");
+	$principe_negro = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Principe Negro' GROUP BY especie");
+	$tiriba_barriga_vermelha = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Tiriba da Barriga Vermelha' GROUP BY especie");
+	$tiriba_testa_vermelha = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Tiriba da Testa Vermelha' GROUP BY especie");
+	$tucano_bico_verde = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Tucano do Bico Verde' GROUP BY especie");
+	$tucano_bico_preto = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Tucano do Bico Preto' GROUP BY especie");
+	$tucano_toco = $mysqli->query("SELECT especie, COUNT(*) FROM passaros WHERE especie = 'Tucano Toco' GROUP BY especie");
+
+	$res_ararajuba = mysqli_fetch_assoc($ararajuba);
+	$res_arara_azul = mysqli_fetch_assoc($arara_azul);
+	$res_arara_caninde = mysqli_fetch_assoc($arara_caninde);
+	$res_arara_vermelha = mysqli_fetch_assoc($arara_vermelha);
+	$res_arara_tricolor = mysqli_fetch_assoc($arara_tricolor);
+	$res_arara_severa = mysqli_fetch_assoc($arara_severa);
+	$res_arara_manilata = mysqli_fetch_assoc($arara_manilata);
+	$res_ararinha_maracana = mysqli_fetch_assoc($ararinha_maracana);
+	$res_ararinha_nobre = mysqli_fetch_assoc($ararinha_nobre);
+	$res_curica_cabeca_azul = mysqli_fetch_assoc($curica_cabeca_azul);
+	$res_jandaia_coquinho = mysqli_fetch_assoc($jandaia_coquinho);
+	$res_jandaia_mineira = mysqli_fetch_assoc($jandaia_mineira);
+	$res_jandaia_verdadeira = mysqli_fetch_assoc($jandaia_verdadeira);
+	$res_marianinha_cabeca_amarela = mysqli_fetch_assoc($marianinha_cabeca_amarela);
+	$res_marianinha_cabeca_preta = mysqli_fetch_assoc($marianinha_cabeca_preta);
+	$res_maitaca_verde = mysqli_fetch_assoc($maitaca_verde);
+	$res_papagaio_mangue = mysqli_fetch_assoc($papagaio_mangue);
+	$res_papagaio_chaua = mysqli_fetch_assoc($papagaio_chaua);
+	$res_papagaio_peito_roxo = mysqli_fetch_assoc($papagaio_peito_roxo);
+	$res_papagaio_galego = mysqli_fetch_assoc($papagaio_galego);
+	$res_papagaio_anaca = mysqli_fetch_assoc($papagaio_anaca);
+	$res_papagaio_verdadeiro = mysqli_fetch_assoc($papagaio_verdadeiro);
+	$res_papagaio_caatinga = mysqli_fetch_assoc($papagaio_caatinga);
+	$res_periquitao_maracana = mysqli_fetch_assoc($periquitao_maracana);
+	$res_principe_negro = mysqli_fetch_assoc($principe_negro);
+	$res_tiriba_barriga_vermelha = mysqli_fetch_assoc($tiriba_barriga_vermelha);
+	$res_tiriba_testa_vermelha = mysqli_fetch_assoc($tiriba_testa_vermelha);
+	$res_tucano_bico_verde = mysqli_fetch_assoc($tucano_bico_verde);
+	$res_tucano_bico_preto = mysqli_fetch_assoc($tucano_bico_preto);
+	$res_tucano_toco = mysqli_fetch_assoc($tucano_toco);
+
+?>

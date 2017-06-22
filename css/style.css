@@ -1,0 +1,472 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: verdana, arial;
+}
+tspan{
+  font-size: 10px;
+}
+
+/*CSS PAGINA DE LOGIN*/
+
+.main{
+	text-align: center;
+	position: relative;
+	top: 100px;
+}
+.main img{
+	width: 150px;
+}
+.main .login{
+	position: relative;
+	top: 20px;
+}
+.main .login span{
+	position: relative;
+	font-size: 22px;
+	top: -5px;
+	margin-right: 5px;
+}
+.main .login input{
+	width: 250px;
+	position: relative;
+	bottom: 10px;
+	padding: 5px;
+	margin: 0 0 10px 0;
+	border: 1px solid #cecece;
+	border-radius: 2px;
+	box-shadow: 1px 1px 2px;
+}
+.main .login button{
+	width: 200px;
+	padding: 5px;
+	font-size: 15px;
+	font-family: verdana, arial;
+	margin-left: 30px;
+	border: 1px solid #cecece;
+	box-shadow: 1px 1px 2px;
+}
+.main .login button:hover{
+	background-color: #e04c2b;
+	color: white;
+	transition: 1s;
+}
+
+/*CSS PAGINA DASHBOARD*/
+
+#logo{
+	width: 25px;
+	position: relative;
+	top: -5px;
+}
+#horario{
+	position: relative;
+	top: 15px;
+}
+
+.page-header h2{
+	text-align: center;
+}
+h4#grafico1{
+	text-align: center;
+}
+
+/*MENU LATERAL*/
+.pushy {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  top: 0;
+  z-index: 9999;
+  background: #191918;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  /* enables momentum scrolling in iOS overflow elements */
+}
+.pushy a {
+  display: block;
+  color: #b3b3b1;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+.pushy a:hover {
+  color: #FFF;
+}
+.pushy ul:first-child {
+  margin-top: 10px;
+}
+.pushy.pushy-left {
+  left: 0;
+}
+.pushy.pushy-right {
+  right: 0;
+}
+
+.pushy-content {
+  visibility: hidden;
+}
+
+/* Menu Movement */
+.pushy-left {
+  -webkit-transform: translate3d(-200px, 0, 0);
+  -ms-transform: translate3d(-200px, 0, 0);
+  transform: translate3d(-200px, 0, 0);
+}
+
+.pushy-open-left #container,
+.pushy-open-left .push {
+  -webkit-transform: translate3d(200px, 0, 0);
+  -ms-transform: translate3d(200px, 0, 0);
+  transform: translate3d(200px, 0, 0);
+}
+
+.pushy-right {
+  -webkit-transform: translate3d(200px, 0, 0);
+  -ms-transform: translate3d(200px, 0, 0);
+  transform: translate3d(200px, 0, 0);
+}
+
+.pushy-open-right #container,
+.pushy-open-right .push {
+  -webkit-transform: translate3d(-200px, 0, 0);
+  -ms-transform: translate3d(-200px, 0, 0);
+  transform: translate3d(-200px, 0, 0);
+}
+
+.pushy-open-left .pushy,
+.pushy-open-right .pushy {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.pushy-open-left .pushy-content,
+.pushy-open-right .pushy-content {
+  visibility: visible;
+}
+
+/* Menu Transitions */
+#container,
+.pushy,
+.push {
+  transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+}
+
+.pushy-content {
+  transition: visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+}
+
+/* Site Overlay */
+.site-overlay {
+  display: none;
+}
+
+.pushy-open-left .site-overlay,
+.pushy-open-right .site-overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-animation: fade 500ms;
+  animation: fade 500ms;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Submenu Appearance */
+.pushy-submenu {
+  /* Submenu Buttons */
+  /* Submenu Icon */
+}
+.pushy-submenu ul {
+  padding-left: 10px;
+  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+.pushy-submenu ul .pushy-link {
+  transition: opacity 0.2s ease-in-out;
+}
+.pushy-submenu ul .pushy-link a{
+  font-size: 15px;
+}
+.pushy-submenu button {
+  width: 100%;
+  color: #b3b3b1;
+  padding: 15px 30px;
+  text-align: left;
+  background: transparent;
+  border: 0;
+}
+.pushy-submenu button:hover {
+  color: #FFF;
+}
+.pushy-submenu > a,
+.pushy-submenu > button {
+  position: relative;
+}
+.pushy-submenu > a::after,
+.pushy-submenu > button::after {
+  content: '';
+  display: block;
+  height: 11px;
+  width: 8px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  background: url("../img/arrow.svg") no-repeat;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: transform 0.2s;
+}
+
+/* Submenu Movement */
+.pushy-submenu-closed ul {
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.pushy-submenu-closed .pushy-link {
+  opacity: 0;
+}
+
+.pushy-submenu-open {
+  /* Submenu Icon */
+}
+.pushy-submenu-open ul {
+  max-height: 1000px;
+  visibility: visible;
+}
+.pushy-submenu-open .pushy-link {
+  opacity: 1;
+}
+.pushy-submenu-open a::after,
+.pushy-submenu-open button::after {
+  -webkit-transform: translateY(-50%) rotate(90deg);
+  -ms-transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
+}
+.menu-btn{
+	width: 50px;
+	padding: 10px;
+}
+
+
+/*CSS PAGINA CADASTRO DE USUARIO*/
+.cad_user{
+	text-align: center;
+}
+.cad_user input{
+	padding: 4px;
+	margin-bottom: 5px;
+	width: 300px;
+	border: 1px solid #cecece;
+	border-radius: 10px;
+}
+.cad_user input:focus{
+  outline: none;
+}
+.cad_user span{
+	font-size: 18px;
+	margin-right: 10px;
+}
+.cad_user button{
+	width: 200px;
+	padding: 3px;
+	font-size: 15px;
+	font-family: verdana, arial;
+	margin-left: 20px;
+	border: 1px solid #cecece;
+	box-shadow: 1px 1px 2px;
+}
+.cad_user button:hover{
+	background-color: #e04c2b;
+	color: white;
+	transition: 1s;
+}
+
+
+/*CSS CADASTRO PASSAROS*/
+
+.cad_passaros{
+  position: relative;
+  margin: 5px auto;
+  width: 100%;
+}
+.cad_passaros input{
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  border: 1px solid #cecece;
+  padding: 4px;
+  border-radius: 10px;
+}
+.cad_passaros select{
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  border: 1px solid #cecece;
+  padding: 4px;
+  border-radius: 10px;
+}
+.cad_passaros select:focus{
+  outline: none;
+}
+.cad_passaros input:focus{
+  outline: none;
+}
+.cad_passaros .div_botao{
+  position: relative;
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+.cad_passaros .div_botao .botao{
+  padding: 4px;
+  font-size: 15px;
+  font-family: verdana, arial;
+  width: 50%;
+  box-shadow: 1px 1px 2px;
+}
+.cad_passaros .div_botao .botao_suprimentos{
+  margin-top: 20px;
+  position: relative;
+  margin: 20px auto;
+  padding: 4px;
+  font-size: 15px;
+  font-family: verdana, arial;
+  width: 50%;
+  box-shadow: 1px 1px 2px;
+}
+.cad_passaros .div_botao .botao_suprimentos:hover{
+  background-color: #e04c2b;
+  transition: 1s;
+  color: white;
+}
+.cad_passaros .div_botao .botao:hover{
+  background-color: #e04c2b;
+  transition: 1s;
+  color: white;
+}
+
+/*CSS VISUALIZACAO PASSAROS*/
+.table-responsive .table.table-bordered{
+  box-shadow: 1px 1px 2px;
+}
+.table-responsive .table.table-bordered thead th{
+  text-align: center;
+  font-family: verdana, arial;
+  font-size: 13px;
+  padding: 0 30px;
+}
+.table-responsive .table.table-bordered tbody td{
+  text-align: center;
+  font-family: verdana,arial;
+  font-size: 12px;
+  padding: 5px;
+}
+.vendido tr td{
+  background-color: #ff9b9b;
+}
+.estoque tr td{
+  background-color: #c2ffbc;
+}
+.legendas{
+  float: right;
+}
+.legendas h5{
+  font-family: verdana,arial;
+  font-size: 10px;
+  position: relative;
+  margin-left: 50px;
+}
+.legendas p{
+  font-family: verdana,arial;
+  font-size: 9px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.legendas .bola_vendido{
+  width: 7px;
+  height: 7px;
+  background-color: #ff9b9b;
+  position: relative;
+  top: 10px;
+  right: -5px;
+  border-radius: 10px;
+}
+.legendas .bola_aguardando{
+  width: 7px;
+  height: 7px;
+  background-color: #c2ffbc;
+  position: relative;
+  top: 10px;
+  right: -5px;
+  border-radius: 10px;
+}
+
+
+/*CSS TROCA SENHA*/
+.troca{
+  text-align: center;
+}
+.troca form{
+  position: relative;
+  text-align: center;
+}
+.troca input{
+  width: 280px;
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid #cecece;
+  padding: 4px;
+  border-radius: 10px;
+}
+.troca button{
+  position: relative;
+  margin-top: 10px;
+}
+.troca button:hover{
+  background-color: #e04c2b;
+  transition: 1s;
+  color: white;
+}
+
+/*CSS ADICIONAR SUPRIMENTOS*/
+.adicionar{
+  position: relative;
+  text-align: center;
+}
+.adicionar input{
+  width: 280px;
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid #cecece;
+  padding: 4px;
+  border-radius: 10px;
+}
+.adicionar button{
+  position: relative;
+  margin-top: 10px;
+}
+.adicionar button:hover{
+  background-color: #e04c2b;
+  transition: 1s;
+  color: white;
+}
