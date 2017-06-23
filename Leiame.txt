@@ -3,7 +3,7 @@
 1º Criar uma database chamada criatorio.db
 2º Importar o arquivo Criatorio.db para dentro da sua database
 3º Alterar as configs em headers/configs usando as configuracoes do seu banco.
-3º Usuário admin e senha 123456a!
+4º Usuário jgsorio e senha 123456a!
 
 
 
